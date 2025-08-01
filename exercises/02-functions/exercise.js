@@ -80,6 +80,7 @@ function createCounter() {
 function processNumbers(numbers, callback) {
   // TODO: Create a new array by applying the callback to each number
   // Hint: Use a loop or array method like map()
+  numbers.map(callback)
 }
 
 // DO NOT MODIFY: Export functions for testing
