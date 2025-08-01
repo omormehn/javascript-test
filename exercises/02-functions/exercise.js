@@ -37,6 +37,7 @@ const multiply = (a, b) => {
  */
 function greetUser(name = "Guest") {
   // TODO: Return a greeting message using the name parameter
+  return `Hello, ${name}!`
   
 }
 
