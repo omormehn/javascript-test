@@ -10,6 +10,7 @@
  */
 function add(a, b) {
   // TODO: Return the sum of a and b
+  return a + b;
   
 }
 
@@ -23,6 +24,7 @@ function add(a, b) {
  */
 const multiply = (a, b) => {
   // TODO: Return the product of a and b
+  return a * b
   
 };
 

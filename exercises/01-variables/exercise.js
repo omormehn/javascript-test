@@ -11,7 +11,16 @@
  */
 function createPersonInfo() {
   // TODO: Create and return an object with the specified properties
-  
+  const name = "Alex Johnson";
+  const age = 28;
+  const city = "New York";
+  const isEmployed = true;
+  return {
+    name,
+    age,
+    city,
+    isEmployed,
+  };
 }
 
 /**
@@ -23,7 +32,8 @@ function createPersonInfo() {
  */
 function calculateAge(birthYear) {
   // TODO: Calculate age by subtracting birth year from 2024
-  
+  const age = 2024 - birthYear;
+  return age;
 }
 
 /**
@@ -35,7 +45,10 @@ function calculateAge(birthYear) {
  */
 function formatFullName(firstName, lastName) {
   // TODO: Combine first and last name with a space between them
-  
+  let FirstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+  let LastName = lastName.charAt(0).toUpperCase() + lastName.slice(1);
+  let formatedName = FirstName + " " + LastName;
+  return formatedName;
 }
 
 /**
@@ -46,7 +59,11 @@ function formatFullName(firstName, lastName) {
  */
 function checkAdult(age) {
   // TODO: Return true if age is 18 or greater, false otherwise
-  
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -58,7 +75,8 @@ function checkAdult(age) {
  */
 function convertTemperature(celsius) {
   // TODO: Convert Celsius to Fahrenheit using the formula
-  
+  const tempInFahrenheit = (celsius * 9) / 5 + 32;
+  return tempInFahrenheit;
 }
 
 /**
@@ -70,9 +88,9 @@ function convertTemperature(celsius) {
  */
 function createGreeting(name, timeOfDay) {
   // TODO: Create a greeting message using template literals or string concatenation
-  
+  const greeting = `Good ${timeOfDay}, ${name}!`;
+  return greeting;
 }
-
 // DO NOT MODIFY: Export functions for testing
 module.exports = {
   createPersonInfo,
@@ -80,5 +98,5 @@ module.exports = {
   formatFullName,
   checkAdult,
   convertTemperature,
-  createGreeting
+  createGreeting,
 };
