@@ -51,6 +51,8 @@ function greetUser(name = "Guest") {
 function calculateTotal(price, taxRate) {
   // TODO: Calculate and return the total price including tax
   // Formula: price + (price * taxRate)
+  const totalPrice = price + (price * taxRate)
+  return totalPrice;
   
 }
 
