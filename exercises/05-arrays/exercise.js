@@ -8,7 +8,8 @@
  */
 function createNumberArray() {
   // TODO: Create and return an array with numbers 1 through 5
-  
+  const numbers = [1, 2, 3, 4, 5];
+  return numbers;
 }
 
 /**
@@ -22,7 +23,8 @@ function createNumberArray() {
 function addToEnd(array, element) {
   // TODO: Create a new array with the element added to the end
   // Hint: Use spread operator [...array, element] or concat()
-  
+  const newArray = [...array, element];
+  return newArray;
 }
 
 /**
@@ -35,7 +37,8 @@ function addToEnd(array, element) {
 function removeFromStart(array) {
   // TODO: Return the first element of the array
   // Hint: Use array[0] or array indexing
-  
+  const first = array[0];
+  return first;
 }
 
 /**
@@ -47,7 +50,13 @@ function removeFromStart(array) {
 function findLargest(numbers) {
   // TODO: Find and return the largest number
   // Hint: Use Math.max() with spread operator or a loop
-  
+  let max = numbers[0];
+  numbers.map((num) => {
+    if (num > max) {
+      max = num;
+    }
+  });
+  return max;
 }
 
 /**
@@ -59,7 +68,14 @@ function findLargest(numbers) {
 function filterEvenNumbers(numbers) {
   // TODO: Filter the array to only include even numbers
   // Hint: Use filter() method and modulo operator (%)
-  
+  let number = [];
+  for (let i = 0; i < numbers.length; i++) {
+    const element = numbers[i];
+    if (element % 2 === 0) {
+      number.push(element)
+    }
+  }
+  return number;
 }
 
 /**
@@ -71,8 +87,15 @@ function filterEvenNumbers(numbers) {
 function sumArray(numbers) {
   // TODO: Calculate the sum of all numbers in the array
   // Hint: Use reduce() method or a loop
-  
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    const element = numbers[i];
+    sum += element;    
+  }
+  return sum;
 }
+
+
 
 // DO NOT MODIFY: Export functions for testing
 module.exports = {
@@ -81,5 +104,5 @@ module.exports = {
   removeFromStart,
   findLargest,
   filterEvenNumbers,
-  sumArray
+  sumArray,
 };
