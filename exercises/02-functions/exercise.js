@@ -11,7 +11,6 @@
 function add(a, b) {
   // TODO: Return the sum of a and b
   return a + b;
-  
 }
 
 /**
@@ -24,8 +23,7 @@ function add(a, b) {
  */
 const multiply = (a, b) => {
   // TODO: Return the product of a and b
-  return a * b
-  
+  return a * b;
 };
 
 /**
@@ -37,8 +35,7 @@ const multiply = (a, b) => {
  */
 function greetUser(name = "Guest") {
   // TODO: Return a greeting message using the name parameter
-  return `Hello, ${name}!`
-  
+  return `Hello, ${name}!`;
 }
 
 /**
@@ -51,9 +48,8 @@ function greetUser(name = "Guest") {
 function calculateTotal(price, taxRate) {
   // TODO: Calculate and return the total price including tax
   // Formula: price + (price * taxRate)
-  const totalPrice = price + (price * taxRate)
+  const totalPrice = price + price * taxRate;
   return totalPrice;
-  
 }
 
 /**
@@ -66,7 +62,11 @@ function calculateTotal(price, taxRate) {
 function createCounter() {
   // TODO: Create a counter variable and return a function that increments it
   // Hint: Use closure to maintain the counter state
-  
+  let counter = 0;
+  return () => {
+    counter++;
+    return counter;
+  };
 }
 
 /**
@@ -80,7 +80,6 @@ function createCounter() {
 function processNumbers(numbers, callback) {
   // TODO: Create a new array by applying the callback to each number
   // Hint: Use a loop or array method like map()
-  
 }
 
 // DO NOT MODIFY: Export functions for testing
@@ -90,5 +89,5 @@ module.exports = {
   greetUser,
   calculateTotal,
   createCounter,
-  processNumbers
+  processNumbers,
 };
